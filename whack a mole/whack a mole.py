@@ -45,11 +45,10 @@ def Status():
     #insert turtle bar
 
 def addShape():
-    screen.addshape('hole.gif')
     screen.addshape('mole.gif')
     screen.addshape('background.gif')
 
-def score(x, y):
+def clicked(x, y):
     global score
     score = score + 1
     print(score)
@@ -63,7 +62,7 @@ def mole1():
     mole_1.down()
     mole_1.shape("mole.gif")
     time.sleep(0.7)
-    mole_1.onclick(score)
+    mole_1.onclick(clicked)
     mole_1.hideturtle()    
 
 def mole2():
@@ -74,7 +73,7 @@ def mole2():
     mole_2.down()
     mole_2.shape("mole.gif")
     time.sleep(0.7)
-    mole_2.onclick(score)
+    mole_2.onclick(clicked)
     mole_2.hideturtle()
 
 def mole3():
@@ -85,7 +84,7 @@ def mole3():
     mole_3.down()
     mole_3.shape("mole.gif")
     time.sleep(0.7)
-    mole_3.onclick(score)
+    mole_3.onclick(clicked)
     mole_3.hideturtle()
 
 def mole4():
@@ -96,7 +95,7 @@ def mole4():
     mole_4.down()
     mole_4.shape("mole.gif")
     time.sleep(0.7)
-    mole_4.onclick(score)
+    mole_4.onclick(clicked)
     mole_4.hideturtle()
 
 def mole5():
@@ -107,7 +106,7 @@ def mole5():
     mole_5.down()
     mole_5.shape("mole.gif")
     time.sleep(0.7)
-    mole_5.onclick(score)
+    mole_5.onclick(clicked)
     mole_5.hideturtle()
 
 def mole6():
@@ -118,7 +117,7 @@ def mole6():
     mole_6.down()
     mole_6.shape("mole.gif")
     time.sleep(0.7)
-    mole_6.onclick(score)
+    mole_6.onclick(clicked)
     mole_6.hideturtle()
 
 def mole7():
@@ -129,7 +128,7 @@ def mole7():
     mole_7.down()
     mole_7.shape("mole.gif")
     time.sleep(0.7)
-    mole_7.onclick(score)
+    mole_7.onclick(clicked)
     mole_7.hideturtle()
 
 def main():
