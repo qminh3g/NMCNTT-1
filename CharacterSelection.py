@@ -1,5 +1,5 @@
 from ImageAssets import *
-from StartGame import *
+from StartRacing import *
 
 # Write code to get player name from here
 playerName = 'Noobmaster69'
