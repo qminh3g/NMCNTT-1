@@ -6,6 +6,7 @@ playerName = 'Noobmaster69'
 
 
 def TraceCharacterSelection(x, y):
+    screen.bgpic('img/CharacterSelectScreen.gif')
     for i in range(6):
         CharList[i].speed(0)
         CharList[i].hideturtle()
