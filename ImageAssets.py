@@ -2,6 +2,10 @@ import random
 import turtle as t
 
 
+# Write code to get player name from here
+playerName = 'Noobmaster69'
+
+
 # Get the image assets
 bo1 = 'img/Characters/bo1.gif'
 bo2 = 'img/Characters/bo2.gif'
@@ -31,16 +35,37 @@ ngua4 = 'img/Characters/ngua4.gif'
 ngua5 = 'img/Characters/ngua5.gif'
 ngua6 = 'img/Characters/ngua6.gif'
 
+potion = 'img/Potion.gif'
+rocket = 'img/Rocket.gif'
+
+
 finishLine = 'img/FinishLine.gif'
 
 ForestMap = 'img/ForestMap.gif'
 BeachMap = 'img/BeachMap.gif'
 GalaxyMap = 'img/GalaxyMap.gif'
+ForestRankTable = 'img/ForestRankTable.gif'
+BeachRankTable = 'img/BeachRankTable.gif'
+GalaxyRankTable = 'img/GalaxyRankTable.gif'
+WinTable = 'img/WinTable.gif'
+LoseTable = 'img/LoseTable.gif'
 
+Small = 'img/Small.gif'
+Medium = 'img/Medium.gif'
+Large = 'img/Large.gif'
 
 # Get maps
 mapChoice = random.randint(0, 2)
 Maps = [ForestMap, BeachMap, GalaxyMap]
+mapChose = Maps[mapChoice]
+
+# Get result panels based on map chose
+if mapChose == ForestMap:
+    RankTable = ForestRankTable
+elif mapChose == BeachMap:
+    RankTable = BeachRankTable
+elif mapChose == GalaxyMap:
+    RankTable = GalaxyRankTable
 
 # Get Characters' Avatars and randomize them
 bo = [bo1, bo2, bo3, bo4, bo5, bo6]
@@ -53,16 +78,25 @@ random.shuffle(ngua)
 random.shuffle(meo)
 avatarsChoice = random.randint(0, 3)
 Avatars = [bo, meo, cho, ngua]
-avatarsChose = Avatars[avatarsChoice]
+avatarsChose = Avatars[2]
 
 # Character Turtle()
 finishLineS = t.Turtle()
+LoseTableS = t.Turtle()
+WinTableS = t.Turtle()
 Char1 = t.Turtle()
 Char2 = t.Turtle()
 Char3 = t.Turtle()
 Char4 = t.Turtle()
 Char5 = t.Turtle()
 Char6 = t.Turtle()
+rocket1 = t.Turtle()
+rocket2 = t.Turtle()
+potion1 = t.Turtle()
+potion2 = t.Turtle()
+SmallButton = t.Turtle()
+MediumButton = t.Turtle()
+LargeButton = t.Turtle()
 
 CharList = [Char1, Char2, Char3, Char4, Char5, Char6]
 
@@ -89,3 +123,11 @@ for Characters in ngua:
     screen.addshape(Characters)
 
 screen.addshape(finishLine)
+screen.addshape(WinTable)
+screen.addshape(LoseTable)
+screen.addshape(potion)
+screen.addshape(rocket)
+screen.addshape(Small)
+screen.addshape(Medium)
+screen.addshape(Large)
+

@@ -6,10 +6,10 @@ from pygame import mixer
 from random import randint
 from playsound import playsound
 from threading import Thread
-from PlayGame import *
+from StartRacing import *
 
-scrWidth = 800
-scrHeight = 650
+scrWidth = 1200
+scrHeight = 645
 
 
 # turtle has to be declared globally, so these other functions can recognise them.
@@ -77,7 +77,7 @@ def initBackground():
     initMainMenu()
 
 
-def clearButtons():
+def clearButtons(x, y):
     turtle.hideturtle()
     startButton.hideturtle()
     optionsButton.hideturtle()
@@ -86,6 +86,21 @@ def clearButtons():
 
 # def startGame(x,y):
 
+# StartGameButton is used to clear the screen after click on Start Game
+
+
+def StartGameButton(x, y):
+    turtle.hideturtle()
+    startButton.hideturtle()
+    optionsButton.hideturtle()
+    instructionsButton.hideturtle()
+    minigameButton.hideturtle()
+    logo.hideturtle()
+    title1.hideturtle()
+    title2.hideturtle()
+    exitButton.hideturtle()
+    frameTitle.hideturtle()
+    PlayGame(x, y)
 # def instructions(x,y):
 
 
@@ -133,7 +148,7 @@ def initMainMenu():
 
 
 #    startButton.onclick(startGame)
-    startButton.onclick(PlayGame)
+    startButton.onclick(StartGameButton)
 #    optionsButton.onclick(options)
 #    instructionsButton.onclick(instructions)
 #    minigameButton.onclick(minigame)
@@ -165,3 +180,14 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# self defined function to print coordinate
+
+
+def buttonclick(x, y):
+    print("You clicked at this coordinate({0},{1})".format(x, y))
+
+ # onscreen function to send coordinate
+turtle.onscreenclick(buttonclick, 1)
+turtle.listen()  # listen to incoming connections
+turtle.done()
