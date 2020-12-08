@@ -66,7 +66,11 @@ def whackamole():
         sttbg.speed(0)
         sttbg.goto(492,0)
         sttbg.down()
-        sttbg.shape('minigame_img/sttbg.gif')
+        '''
+        Chèn điều kiện if, if option chọn tiếng anh -> 'minigame_img/ensttbg.gif'
+        nếu option chọn tiếng việt - > 'minigame_img/vnsttbg.gif'
+        '''
+        sttbg.shape('minigame_img/ensttbg.gif')
         #insert turtle bar
 
     def addShape():
@@ -83,7 +87,11 @@ def whackamole():
         screen.addshape("minigame_img/7.gif")
         screen.addshape("minigame_img/8.gif")
         screen.addshape("minigame_img/9.gif")
-        screen.addshape("minigame_img/sttbg.gif")
+        '''
+        Chèn điều kiện if, if option chọn tiếng anh -> 'minigame_img/ensttbg.gif'
+        nếu option chọn tiếng việt - > 'minigame_img/vnsttbg.gif'
+        '''
+        screen.addshape("minigame_img/ensttbg.gif")
         screen.addshape("minigame_img/heart.gif")
         
     def plus(x, y):
@@ -197,7 +205,7 @@ def whackamole():
         bomb_1.down()
         bomb_1.showturtle()
         bomb_1.shape("minigame_img/bomb.gif")
-        time.sleep(0.6)
+        time.sleep(0.4)
         bomb_1.onclick(minus)
         bomb_1.hideturtle()    
     def bomb2():
@@ -207,7 +215,7 @@ def whackamole():
         bomb_2.down()
         bomb_2.showturtle()
         bomb_2.shape("minigame_img/bomb.gif")
-        time.sleep(0.6)
+        time.sleep(0.4)
         bomb_2.onclick(minus)
         bomb_2.hideturtle()
     def bomb3():
@@ -217,7 +225,7 @@ def whackamole():
         bomb_3.down()
         bomb_3.showturtle()
         bomb_3.shape("minigame_img/bomb.gif")
-        time.sleep(0.6)
+        time.sleep(0.4)
         bomb_3.onclick(minus)
         bomb_3.hideturtle()
     def bomb4():
@@ -227,7 +235,7 @@ def whackamole():
         bomb_4.down()
         bomb_4.showturtle()
         bomb_4.shape("minigame_img/bomb.gif")
-        time.sleep(0.6)
+        time.sleep(0.4)
         bomb_4.onclick(minus)
         bomb_4.hideturtle()
     def bomb5():
@@ -237,7 +245,7 @@ def whackamole():
         bomb_5.down()
         bomb_5.showturtle()
         bomb_5.shape("minigame_img/bomb.gif")
-        time.sleep(0.6)
+        time.sleep(0.4)
         bomb_5.onclick(minus)
         bomb_5.hideturtle()
     def bomb6():
@@ -247,7 +255,7 @@ def whackamole():
         bomb_6.down()
         bomb_6.showturtle()
         bomb_6.shape("minigame_img/bomb.gif")
-        time.sleep(0.6)
+        time.sleep(0.4)
         bomb_6.onclick(minus)
         bomb_6.hideturtle()
     def bomb7():
@@ -257,7 +265,7 @@ def whackamole():
         bomb_7.down()
         bomb_7.showturtle()
         bomb_7.shape("minigame_img/bomb.gif")
-        time.sleep(0.6)
+        time.sleep(0.4)
         bomb_7.onclick(minus)
         bomb_7.hideturtle()
     #STT
@@ -280,13 +288,13 @@ def whackamole():
             sm.shape(num[smin1])
         fmin1 = int(clock / 10)
         smin1 = int(clock % 10)
-
+        
         fmin()
-        smin()    
+        smin()
         time.sleep(1)
-        #cai tien
         fm.hideturtle()
         sm.hideturtle()
+               
     def dplives():
         global lives
         if lives == 1:
@@ -326,11 +334,11 @@ def whackamole():
         else:
             dsc.hideturtle()
             s1()
-            s2()
+            s2()            
+    num = ["minigame_img/0.gif","minigame_img/1.gif","minigame_img/2.gif","minigame_img/3.gif","minigame_img/4.gif","minigame_img/5.gif","minigame_img/6.gif","minigame_img/7.gif","minigame_img/8.gif","minigame_img/9.gif"]
     def main():
         global clock, lives, score, score_max, num
-        while clock > 0 and score < score_max and lives > 0: 
-            num = ["minigame_img/0.gif","minigame_img/1.gif","minigame_img/2.gif","minigame_img/3.gif","minigame_img/4.gif","minigame_img/5.gif","minigame_img/6.gif","minigame_img/7.gif","minigame_img/8.gif","minigame_img/9.gif"]
+        while clock > 0 and score < score_max and lives > 0:
             t = random.randint(1,28)
             if t == 1 or t == 15 or t == 22:
                 mole1()
@@ -359,18 +367,20 @@ def whackamole():
             if t == 13:
                 bomb6()
             if t == 14:
-                bomb7()                
+                bomb7()
+            min()
             clock = clock - 1
             score_item()
             dplives()
-            min()     
+               
         #Cong coin cho nguoi choi  
         '''
         if score == score_max:
-            player.coin = player.coin + #so tien
+            player.coin = player.coin + 2000
         '''            
     addShape()
     Background()
-    Status() 
+    Status()
+    time.sleep(1)
     main()
-whackamole()
+
