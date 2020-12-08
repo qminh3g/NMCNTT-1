@@ -1,7 +1,6 @@
 import random
 import turtle as t
 
-
 # Get the image assets
 bo1 = 'img/Characters/bo1.gif'
 bo2 = 'img/Characters/bo2.gif'
@@ -30,8 +29,6 @@ ngua3 = 'img/Characters/ngua3.gif'
 ngua4 = 'img/Characters/ngua4.gif'
 ngua5 = 'img/Characters/ngua5.gif'
 ngua6 = 'img/Characters/ngua6.gif'
-
-finishLine = 'img/FinishLine.gif'
 
 ForestMap = 'img/ForestMap.gif'
 BeachMap = 'img/BeachMap.gif'
@@ -67,7 +64,7 @@ Char6 = t.Turtle()
 CharList = [Char1, Char2, Char3, Char4, Char5, Char6]
 
 # Characters' names and randomize name list
-NameList = ['Tân', 'Thịnh', 'Tú', 'Huy', 'Ben', 'Minh']
+NameList = ['Luffy', 'Erza', 'Tom', 'Jerry', 'Snow', 'Belle']
 random.shuffle(NameList)
 Char1Name = NameList[0]
 Char2Name = NameList[1]
@@ -87,5 +84,4 @@ for Characters in cho:
     screen.addshape(Characters)
 for Characters in ngua:
     screen.addshape(Characters)
-
-screen.addshape(finishLine)
+screen.addshape('img/FinishLine.gif')
