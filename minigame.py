@@ -291,7 +291,7 @@ def whackamole():
         
         fmin()
         smin()
-        time.sleep(1)
+        time.sleep(0.6)
         fm.hideturtle()
         sm.hideturtle()
                
