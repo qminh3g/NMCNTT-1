@@ -940,12 +940,16 @@ def minigame(x,y):
             mole3()
         if t == 4 or t == 18 or t == 25:
             mole4()
+        mole_4.onclick(plus)
         if t == 5 or t == 19 or t == 26:
             mole5()
+        mole_5.onclick(plus)
         if t == 6 or t == 20 or t == 27:
             mole6()
+        mole_6.onclick(plus)
         if t == 7 or t == 21 or t == 28:
             mole7()
+        mole_7.onclick(plus)
         if t == 8:
             bomb1()
         if t == 9:
@@ -1006,6 +1010,7 @@ def minigame(x,y):
     closeMiniGame.shape("blank")
     sttbg.shape("blank")
     turtle.update()
+    
 
 def closeMG(x,y):
     clickSound()
@@ -1022,6 +1027,7 @@ def closeMG(x,y):
         player.heart = str(int(lives) - 1)
     score = 0
     clock = 30
+    turtle.tracer(False)
     bg.shape("blank")
 
     #character
@@ -1053,12 +1059,12 @@ def closeMG(x,y):
     dsc.shape("blank")
     closeMiniGame.shape("blank")
     sttbg.shape("blank")
+    turtle.tracer(True)
     
 def plus(x, y):
     whackSound()
     global score
     score = score + 1
-    print(score)
     
 def minus(x, y):
     wrongSound()
@@ -1078,12 +1084,14 @@ def heart2():
     heart_2.penup()
     heart_2.goto(324,290)
     heart_2.shape("minigame_img/heart.gif")
+    turtle.update()
     
 def heart3():
     heart_3.speed(0)
     heart_3.penup()
     heart_3.setpos(284,290)
     heart_3.shape("minigame_img/heart.gif")
+    turtle.update()
     
 #Set Mole
 def mole1():
@@ -1094,10 +1102,14 @@ def mole1():
     mole_1.showturtle()
     mole_1.shape("minigame_img/mole.gif")
     mole_1.onclick(plus)
-    time.sleep(0.)
+    turtle.update()
+    time.sleep(0.6)
     mole_1.hideturtle()
+    turtle.update()
+
 
 def mole2():
+    turtle.tracer(False)
     mole_2.speed(0)
     mole_2.up()
     mole_2.goto(8, 6)
@@ -1105,10 +1117,13 @@ def mole2():
     mole_2.showturtle()
     mole_2.shape("minigame_img/mole.gif")
     mole_2.onclick(plus)
-    time.sleep(0.4)
+    turtle.update()
+    time.sleep(0.6)
     mole_2.hideturtle()
+    turtle.update()
 
 def mole3():
+    turtle.tracer(False)
     mole_3.speed(0)
     mole_3.up()
     mole_3.goto(-210, -79)
@@ -1116,10 +1131,13 @@ def mole3():
     mole_3.showturtle()
     mole_3.shape("minigame_img/mole.gif")
     mole_3.onclick(plus)
-    time.sleep(0.4)
+    turtle.update()
+    time.sleep(0.6)
     mole_3.hideturtle()
+    turtle.update()
 
 def mole4():
+    turtle.tracer(False)
     mole_4.speed(0)
     mole_4.up()
     mole_4.goto(170, -82)
@@ -1127,10 +1145,13 @@ def mole4():
     mole_4.showturtle()
     mole_4.shape("minigame_img/mole.gif")
     mole_4.onclick(plus)
-    time.sleep(0.4)
+    turtle.update()
+    time.sleep(0.6)
     mole_4.hideturtle()
+    turtle.update()
 
 def mole5():
+    turtle.tracer(False)
     mole_5.speed(0)
     mole_5.up()
     mole_5.goto(-329, -196)
@@ -1138,10 +1159,13 @@ def mole5():
     mole_5.showturtle()
     mole_5.shape("minigame_img/mole.gif")
     mole_5.onclick(plus)
-    time.sleep(0.4)
+    turtle.update()
+    time.sleep(0.6)
     mole_5.hideturtle()
+    turtle.update()
 
 def mole6():
+    turtle.tracer(False)
     mole_6.speed(0)
     mole_6.up()
     mole_6.goto(-22, -182)
@@ -1149,10 +1173,13 @@ def mole6():
     mole_6.showturtle()
     mole_6.shape("minigame_img/mole.gif")
     mole_6.onclick(plus)
-    time.sleep(0.4)
+    turtle.update()
+    time.sleep(0.6)
     mole_6.hideturtle()
+    turtle.update()
 
 def mole7():
+    turtle.tracer(False)
     mole_7.speed(0)
     mole_7.up()
     mole_7.goto(277, -206)
@@ -1160,9 +1187,11 @@ def mole7():
     mole_7.showturtle()
     mole_7.shape("minigame_img/mole.gif")
     mole_7.onclick(plus)
-    time.sleep(0.4)
+    turtle.update()
+    time.sleep(0.6)
     mole_7.hideturtle()
-    
+    turtle.update()
+
 #Set bomb        
 def bomb1():
     bomb_1.speed(0)
@@ -1172,8 +1201,10 @@ def bomb1():
     bomb_1.showturtle()
     bomb_1.shape("minigame_img/bomb.gif")
     bomb_1.onclick(minus)
+    turtle.update()
     time.sleep(0.6)
     bomb_1.hideturtle()
+    turtle.update()
     
 def bomb2():
     bomb_2.speed(0)
@@ -1183,8 +1214,10 @@ def bomb2():
     bomb_2.showturtle()
     bomb_2.shape("minigame_img/bomb.gif")
     bomb_2.onclick(minus)
+    turtle.update()
     time.sleep(0.6)
     bomb_2.hideturtle()
+    turtle.update()
     
 def bomb3():
     bomb_3.speed(0)
@@ -1194,8 +1227,10 @@ def bomb3():
     bomb_3.showturtle()
     bomb_3.shape("minigame_img/bomb.gif")
     bomb_3.onclick(minus)
+    turtle.update()
     time.sleep(0.6)
     bomb_3.hideturtle()
+    turtle.update()
     
 def bomb4():
     bomb_4.speed(0)
@@ -1205,8 +1240,10 @@ def bomb4():
     bomb_4.showturtle()
     bomb_4.shape("minigame_img/bomb.gif")
     bomb_4.onclick(minus)
+    turtle.update()
     time.sleep(0.6)
     bomb_4.hideturtle()
+    turtle.update()
     
 def bomb5():
     bomb_5.speed(0)
@@ -1216,8 +1253,10 @@ def bomb5():
     bomb_5.showturtle()
     bomb_5.shape("minigame_img/bomb.gif")
     bomb_5.onclick(minus)
+    turtle.update()
     time.sleep(0.6)
     bomb_5.hideturtle()
+    turtle.update()
     
 def bomb6():
     bomb_6.speed(0)
@@ -1227,8 +1266,10 @@ def bomb6():
     bomb_6.showturtle()
     bomb_6.shape("minigame_img/bomb.gif")
     bomb_6.onclick(minus)
+    turtle.update()
     time.sleep(0.6)
     bomb_6.hideturtle()
+    turtle.update()
     
 def bomb7():
     bomb_7.speed(0)
@@ -1237,15 +1278,17 @@ def bomb7():
     bomb_7.down()
     bomb_7.showturtle()
     bomb_7.shape("minigame_img/bomb.gif")
-    bomb_7.onclick(minus) 
+    bomb_7.onclick(minus)
+    turtle.update()
     time.sleep(0.6)
     bomb_7.hideturtle()
+    turtle.update()
+    
 #STT
 def min():
     global clock
     fmin()
     smin()
-    time.sleep(1)
     
 def fmin():
     global clock
@@ -1254,6 +1297,7 @@ def fmin():
     fm.setpos(470, 77.5)
     fmin1 = int(clock / 10)
     fm.shape(num[fmin1])
+    turtle.update()
 
 def smin():
     global clock
@@ -1262,6 +1306,7 @@ def smin():
     sm.setpos(514, 77.5)
     smin1 = int(clock % 10)
     sm.shape(num[smin1])
+    turtle.update()
 
 def dplives():
     global lives
@@ -1277,6 +1322,7 @@ def dplives():
         heart1()
         heart2()
         heart3()
+    turtle.update()
     
 def score_item():
     global score
@@ -1286,18 +1332,21 @@ def score_item():
         ds1.goto(470, -72.5)
         ds1.down
         ds1.shape(num[int(score / 10)])
+        turtle.update()
     def s2():
         ds2.speed(0)
         ds2.up()
         ds2.goto(514, -72.5)
         ds2.down
         ds2.shape(num[int(score % 10)])
+        turtle.update()
     def s_center():
         dsc.speed(0)
         dsc.up()
         dsc.goto(492, -72.5)
         dsc.down
         dsc.shape(num[int(score % 10)])
+        turtle.update()
     if score < 10:
         s_center()
     else:
@@ -1776,7 +1825,7 @@ def showNotice(value, item):
     insertNotice.hideturtle()
     insertNotice.setpos(0,100)
     noticeBoard.setpos(0,0)
-    noticeBoard.shape("img/notice.gif")       
+    noticeBoard.shape("img/notice.gif")
     insertNotice.color("white")
     if value == "success":
         if language == "en":
@@ -1796,6 +1845,7 @@ def showNotice(value, item):
             insertNotice.write("Fail, you don't have enough US to buy\n" + item + " item or your chest is full. \nPlease check your inventory!",align="center", font=("Serifa BT", 23,"normal"))
         else:
             insertNotice.write("Thất bại, bạn không có đủ US để mua \n" + item + " hoặc rương của bạn đã đầy. \nVui lòng kiểm tra lại rương!",align="center", font=("Serifa BT", 23,"normal"))
+    turtle.update()
     time.sleep(1)
     insertNotice.clear()
     noticeBoard.shape("blank")
